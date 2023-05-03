@@ -67,6 +67,54 @@ impl RefType {
         nullable: true,
         heap_type: HeapType::Extern,
     };
+
+    /// Alias for the `anyref` type in WebAssembly
+    pub const ANYREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::Any,
+    };
+
+    /// Alias for the `nullref` type in WebAssembly
+    pub const NULLREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::None,
+    };
+
+    /// Alias for the `nullexternref` type in WebAssembly
+    pub const NULLEXTERNREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::NoExtern,
+    };
+
+    /// Alias for the `nullfuncref` type in WebAssembly
+    pub const NULLFUNCREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::NoFunc,
+    };
+
+    /// Alias for the `eqref` type in WebAssembly
+    pub const EQREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::Eq,
+    };
+
+    /// Alias for the `structref` type in WebAssembly
+    pub const STRUCTREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::Struct,
+    };
+
+    /// Alias for the `arrayref` type in WebAssembly
+    pub const ARRAYREF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::Array,
+    };
+
+    /// Alias for the `i31ref` type in WebAssembly
+    pub const I31REF: RefType = RefType {
+        nullable: true,
+        heap_type: HeapType::I31,
+    };
 }
 
 impl Encode for RefType {
